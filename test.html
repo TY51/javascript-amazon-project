@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let dataArray = [];
+      fetch("data/launches.json")
+        .then((response) => response.json())
+        .then((data) => {
+          dataObj = data;
+
+          console.log(Array.isArray(dataObj));
+
+          dataObj.forEach((element) => {
+            if (
+              element.launch_year === "2018" &&
+              element.launch_success === true
+            ) {
+              console.log(element.length);
+            }
+          });
+        });
+    </script>
+  </body>
+</html>
