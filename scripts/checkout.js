@@ -93,6 +93,5 @@ document.querySelectorAll(".js-delete").forEach((deleteItem) => {
   deleteItem.addEventListener("click", () => {
     const productId = deleteItem.dataset.productId;
     removeCart(productId);
-    console.log(cart);
   });
 });
